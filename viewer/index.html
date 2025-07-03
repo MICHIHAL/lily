@@ -2,11 +2,95 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>構造ファイル一覧</title>
+  <title>構造ファイル一覧 Viewer 🌱</title>
+  <style>
+    body {
+      font-family: 'Zen Maru Gothic', 'Hiragino Maru Gothic Pro', sans-serif;
+      background-color: #fdf8f3;
+      color: #333;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #855d8c;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background-color: #f9e5f0;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    th, td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #f0dfe8;
+      text-align: left;
+    }
+
+    tr:hover {
+      background-color: #fef4f9;
+    }
+
+    a.button {
+      background-color: #ffb3d8;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.2s ease;
+    }
+
+    a.button:hover {
+      background-color: #ff8cc3;
+    }
+
+    @media screen and (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      td {
+        position: relative;
+        padding-left: 50%;
+      }
+
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        color: #888;
+      }
+
+      tr {
+        margin-bottom: 10px;
+        border: 1px solid #f0dfe8;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>構造ファイル一覧 Viewer 🌱</h1>
-  <table border="1">
+  <h1>📘 構造ファイル一覧 Viewer</h1>
+  <table>
     <thead>
       <tr>
         <th>ファイル名</th>
@@ -21,7 +105,7 @@
   </table>
 
   <script>
-    fetch("../index/structureIndexMap.json")
+    fetch("https://raw.githubusercontent.com/MICHIHAL/lily/main/index/structureIndexMap_with_rawUrl.json")
       .then(res => res.json())
       .then(data => {
         const table = document.getElementById("tableBody");
@@ -34,12 +118,14 @@
             item.type,
             item.zone,
             item.description,
-            `<a href="../structures/${item.fileName}" target="_blank">開く</a>`
+            `<a class="button" href="${item.rawUrl}" target="_blank">開く</a>`
           ];
 
-          cells.forEach(cell => {
+          const headers = ["ファイル名", "名前", "タイプ", "ZONE", "説明", "開く"];
+          cells.forEach((cell, i) => {
             const td = document.createElement("td");
             td.innerHTML = cell;
+            td.setAttribute("data-label", headers[i]);
             row.appendChild(td);
           });
 
