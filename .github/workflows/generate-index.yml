@@ -1,0 +1,38 @@
+name: 🔄 Generate All File Index
+
+on:
+  push:
+    paths:
+      - "structures/**"
+      - "scripts/**"
+      - "viewer/**"
+      - "index/**"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Check out repository
+        uses: actions/checkout@v3
+
+      - name: 🔧 Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: 📦 Install dependencies (if needed)
+        run: |
+          npm install
+
+      - name: 🛠 Run generateAllFileIndex.js
+        run: node scripts/generateAllFileIndex.js
+
+      - name: 📤 Commit & push if changed
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add index/allFileIndexMap.json
+          git diff --cached --quiet || git commit -m "🔄 Auto-update all file index"
+          git push
