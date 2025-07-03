@@ -1,0 +1,37 @@
+{
+  "name": "structureReferenceCommand_v1.0",
+  "type": "Func",
+  "zone": "ZONE-1",
+  "description": "構造体ファイルをChatGPTに読み込ませて参照できるようにするための命令形式定義。GitHubなどのRAW URLに対応し、設計支援や自動レビューなどを補助する。",
+  "version": "1.0",
+  "commandFormat": {
+    "syntax": [
+      "▶ 命令：構造を参照に追加",
+      "▶ 対象：{構造名}",
+      "▶ URL：https://raw.githubusercontent.com/.../xxx.json",
+      "▶ オプション：{zone表示 | swiftCode検査 | 自動レビュー など}"
+    ],
+    "exampleSimple": {
+      "命令": "構造を参照に追加",
+      "対象": "memoryPolicy_v4.0",
+      "URL": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/memoryPolicy_v4.0.json"
+    },
+    "exampleWithOption": {
+      "命令": "構造を参照に追加",
+      "対象": "brainLayer_v2",
+      "URL": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/brainLayer_v2.json",
+      "オプション": [
+        "zone表示",
+        "swiftCode検査",
+        "自動レビュー"
+      ]
+    }
+  },
+  "notes": [
+    "JSONファイル形式であることが必須（.json拡張子）",
+    "構造体内部に name, type, zone, swiftCode などの項目が含まれている必要がある",
+    "セッション中のみ有効。毎回の読み込みが推奨される",
+    "GitHub Pagesではなく RAW URL を使用すること"
+  ],
+  "created": "2025-07-03T15:48:22.005846"
+}
