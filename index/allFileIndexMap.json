@@ -250,6 +250,16 @@
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/toolLayer_v1.json"
   },
   {
+    "fileName": "allFileIndexMap.json",
+    "folder": "index",
+    "name": "(未定義)",
+    "type": "(type不明)",
+    "zone": "(ZONE不明)",
+    "version": "不明",
+    "description": "(説明なし)",
+    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/index/allFileIndexMap.json"
+  },
+  {
     "fileName": "structureIndexMap.json",
     "folder": "index",
     "name": "(未定義)",
