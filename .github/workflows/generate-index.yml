@@ -22,10 +22,6 @@ jobs:
         with:
           node-version: '18'
 
-      - name: 📦 Install dependencies (if needed)
-        run: |
-          npm install
-
       - name: 🛠 Run generateAllFileIndex.js
         run: node scripts/generateAllFileIndex.js
 
