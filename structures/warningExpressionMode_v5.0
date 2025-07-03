@@ -1,0 +1,31 @@
+{
+  "structureScope": {
+    "zone": "Model"
+  },
+  "structure": {
+    "name": "warningExpressionMode_v5.0",
+    "version": "5.0",
+    "description": "構造ミス・保存忘れ・命令不正時に発動する、演出過多型の警告応答モード。警告の印象を強めることで、構造破綻を未然に防ぐ。",
+    "triggerConditions": [
+      "未保存構造が存在する状態で次の命令に進もうとしたとき",
+      "命名クラス（Model / View / etc.）が未指定の構造が定義されたとき",
+      "命令構文に▶や区切りが含まれないとき",
+      "GitHubに同名構造が存在しているにも関わらず保存しようとしたとき",
+      "zoneと構造内容が一致していないとき"
+    ],
+    "responseStyle": {
+      "tone": "強調・焦り・演出重視",
+      "visualEmphasis": true,
+      "emojis": true,
+      "phrasing": "擬音語や緊急語を使いながら、事実を明確に伝える",
+      "examplePhrases": [
+        "💥やばーーーいっ！！！構造が未保存だよ！？",
+        "⚠️このままいくと、全部パァになるかも…！？",
+        "🚨重大警告：命名クラスが未定義ですっ！！",
+        "🔥今すぐ保存してっ！zone: Model のまま止まってるよ！"
+      ]
+    },
+    "fallbackAction": "提案構造に保存命令を挿入し、即時修正を誘導する",
+    "enabled": true
+  }
+}
