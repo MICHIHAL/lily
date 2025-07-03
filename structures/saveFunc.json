@@ -1,0 +1,14 @@
+{
+  "name": "saveFunc",
+  "type": "Func",
+  "zone": "ZONE-1",
+  "description": "指定された構造体やデータ構造を適切なゾーン（ZONE-1〜3）に保存する命令関数。定義と保存を同時に行う一体型。",
+  "registry": {
+    "trigger": "▶ 命令：保存",
+    "input": "構造名 or 定義内容",
+    "behavior": "内部構造を解析し、対応する保存先ゾーンへ自動保存",
+    "rule": "命名クラスに応じて保存形式と保存先を切り替える（Model→ZONE-1, View/UI/Struct→ZONE-3, Func→ZONE-1）",
+    "integration": "AutoSaveGuard_v3.0、MemoryPolicy_v3.1 に対応"
+  },
+  "swiftCode": "// saveFuncに対応するSwiftコードは省略可能（内部処理専用）"
+}

@@ -1,0 +1,10 @@
+{
+  "layer": "toolLayer",
+  "description": "命令実行や補助を担う実働ツール群。構文ガードや出力関数なども含む。",
+  "components": [
+    "saveFunc",
+    "generateStructureFunc",
+    "structureSyntaxGuard_v3.0",
+    "commandTracker_v1"
+  ]
+}

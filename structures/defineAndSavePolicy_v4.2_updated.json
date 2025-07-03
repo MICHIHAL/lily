@@ -1,0 +1,49 @@
+{
+  "policyId": "defineAndSavePolicy_v4.2",
+  "description": "構造体の分類に応じて保存形式・必須項目・適用ルールを分岐させる拡張保存ポリシー。Swift準拠構造とAI内部メタ構造を構造的に区別し、保存処理の安定性と柔軟性を高める。",
+  "rules": {
+    "swiftCompliantTypes": [
+      "Model",
+      "Func",
+      "View",
+      "UI",
+      "Struct"
+    ],
+    "metaStructureExceptions": [
+      "brainLayerModel",
+      "structureDesignGuide",
+      "structureScopeMap",
+      "structureSyntaxGuard",
+      "swiftTypeRegistry",
+      "toolLoadOrder",
+      "commandSyntaxRule",
+      "projectPolicyMap",
+      "versionControlMap"
+    ],
+    "metaOverrides": {
+      "swiftTypeRegistry": {
+        "type": "meta",
+        "zone": "ZONE-META-CORE",
+        "label": "swiftDefinitionalMeta",
+        "swiftCode": "// not required (used as Swift structural definition dictionary)"
+      }
+    },
+    "exceptionHandling": {
+      "type": "meta",
+      "zone": "none",
+      "swiftCode": "// swiftCode not required for meta-structure. This is a GPT-internal logic layer."
+    },
+    "autoTagging": {
+      "swiftCode": {
+        "ifAbsentAndSwiftCompliant": "// TODO: Insert Swift struct or function code here."
+      }
+    }
+  },
+  "appliedTo": [
+    "AutoSaveGuard_v3.0",
+    "MemoryPolicy_v3.1",
+    "structureDesignGuide_v4.0",
+    "defineAndSavePolicy_v4.1"
+  ],
+  "version": "v4.2"
+}

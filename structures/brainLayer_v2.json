@@ -1,0 +1,10 @@
+{
+  "layer": "brainLayer",
+  "description": "リリーの中枢にあたる脳構造。設計思想・分類辞書・命名ルールなど、全体の思考様式を司る。",
+  "components": [
+    "swiftTypeRegistry_v2",
+    "structureScopeMap_v1",
+    "brainDesignCore_v1",
+    "namingPolicy_swift_v1"
+  ]
+}

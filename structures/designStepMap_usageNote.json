@@ -1,0 +1,49 @@
+{
+  "name": "designStepMap_usageNote",
+  "type": "Model",
+  "zone": "ZONE-1",
+  "description": "designStepMap_v4.1 に対応する構造運用の補足説明。各STEPとその使用構造体・目的の対応関係を明示し、整合性検証と進行確認を容易にする。",
+  "stepUsage": {
+    "STEP 0": {
+      "目的": "体験で感覚をつかむ",
+      "対象構造": [
+        "projectAnswerInstruction_v4.1",
+        "brainLayer_v2"
+      ]
+    },
+    "STEP 1": {
+      "目的": "構造を“読める”力の育成",
+      "対象構造": [
+        "structureSyntaxGuard_v3.1",
+        "swiftTypeRegistry_v2_with_code"
+      ]
+    },
+    "STEP 2": {
+      "目的": "意味と意図を“設計から読み解く”力",
+      "対象構造": [
+        "memoryPolicy_v4.0",
+        "toolLoadOrder_v4.0"
+      ]
+    },
+    "STEP 3": {
+      "目的": "リリー構造を“活用・改造”する力",
+      "対象構造": [
+        "saveFunc",
+        "autoSaveGuard_v4.0"
+      ]
+    },
+    "STEP 4": {
+      "目的": "思想を構造に落とし“開発に参加”する力",
+      "対象構造": [
+        "defineAndSavePolicy_v4.2_updated"
+      ]
+    },
+    "STEP 5": {
+      "目的": "構造ログの管理・発展・記録保存スキル",
+      "対象構造": [
+        "versionTracker_v1.0"
+      ]
+    }
+  },
+  "notes": "この構造はdesignStepMap_v4.1に従って開発進行を管理するための補助モデル。"
+}

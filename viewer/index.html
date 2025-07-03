@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>構造ファイル一覧</title>
+</head>
+<body>
+  <h1>構造ファイル一覧 Viewer 🌱</h1>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>ファイル名</th>
+        <th>名前</th>
+        <th>タイプ</th>
+        <th>ZONE</th>
+        <th>説明</th>
+        <th>開く</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+
+  <script>
+    fetch("../index/structureIndexMap.json")
+      .then(res => res.json())
+      .then(data => {
+        const table = document.getElementById("tableBody");
+        data.forEach(item => {
+          const row = document.createElement("tr");
+
+          const cells = [
+            item.fileName,
+            item.name,
+            item.type,
+            item.zone,
+            item.description,
+            `<a href="../structures/${item.fileName}" target="_blank">開く</a>`
+          ];
+
+          cells.forEach(cell => {
+            const td = document.createElement("td");
+            td.innerHTML = cell;
+            row.appendChild(td);
+          });
+
+          table.appendChild(row);
+        });
+      });
+  </script>
+</body>
+</html>

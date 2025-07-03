@@ -1,0 +1,10 @@
+{
+  "layer": "policyLayer",
+  "description": "構造運用における命令ルール・保存戦略・自動補助規則など、動作全体の方針を定める。",
+  "components": [
+    "defineAndSavePolicy_v4.1",
+    "zonePolicy_v1",
+    "autoSaveGuard_v4.1",
+    "toolLoadOrder_v4.0"
+  ]
+}

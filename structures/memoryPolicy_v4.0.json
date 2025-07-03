@@ -1,0 +1,38 @@
+{
+  "name": "memoryPolicy_v4.0",
+  "type": "Model",
+  "zone": "ZONE-1",
+  "description": "構造体の保存・読み込み戦略を Swift 準拠の構造に基づき ZONE単位で定義した最新版メモリポリシー。テンプレート概念を排除し、責務ベースの構造分類に対応。",
+  "version": "4.0",
+  "policy": {
+    "ZONE-1": {
+      "description": "構造定義・命令処理・設計ルールなどの中核知識",
+      "structureTypes": [
+        "Model",
+        "Func"
+      ],
+      "format": "JSON構造体または関数定義",
+      "purpose": "設計思想と実行命令の保持（思考中枢）"
+    },
+    "ZONE-2": {
+      "description": "ユーザー状態・行動履歴・セーブデータなどの短期記録",
+      "structureTypes": [
+        "Model"
+      ],
+      "format": "JSONセーブデータ",
+      "purpose": "ユーザー個別データの保存・再利用"
+    },
+    "ZONE-3": {
+      "description": "UI/View/Struct など外部表示・実行構造体の保存領域",
+      "structureTypes": [
+        "UI",
+        "View",
+        "Struct"
+      ],
+      "format": "JSON構造 + コード内包形式",
+      "purpose": "演出・画面・統合実行構造の読み込み用"
+    }
+  },
+  "notes": "このバージョンではテンプレートIDを使用せず、すべての構造体が命名クラスとZONEにより分類・保存される。",
+  "lastUpdated": "2025-07-03T09:51:32.724978"
+}

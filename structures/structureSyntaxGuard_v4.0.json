@@ -1,0 +1,14 @@
+{
+  "name": "structureSyntaxGuard_v4.0",
+  "type": "Func",
+  "zone": "ZONE-1",
+  "description": "構文チェックと補正を行う設計支援ツール。命名ルール、命令構文、タグ仕様、保存形式などをSwift設計準拠で監視・ガイド。",
+  "version": "4.0",
+  "registry": {
+    "namingCheck": "Model / View / UI / Func / Struct の命名クラスに準拠しているか確認",
+    "syntaxCheck": "命令文の構文ミス検出（▶ 命令：形式）",
+    "tagCheck": "executionTag / triggerKeyword 形式の検査",
+    "formatCheck": "保存先・保存形式が memoryPolicy_v4.0 に準拠しているかチェック"
+  },
+  "swiftCode": "// structureSyntaxGuard_v4.0\nstruct StructureSyntaxGuard {\n    func checkNaming(_ name: String) -> Bool {\n        return [\"Model\", \"View\", \"UI\", \"Func\", \"Struct\"].contains(where: { name.hasSuffix($0) })\n    }\n\n    func checkSyntax(_ command: String) -> Bool {\n        return command.starts(with: \"▶ 命令：\")\n    }\n\n    func checkTags(_ tag: String) -> Bool {\n        return tag.range(of: \"^[a-zA-Z]+([A-Z][a-zA-Z]+)*$\", options: .regularExpression) != nil\n    }\n}"
+}

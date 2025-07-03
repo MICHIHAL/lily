@@ -1,0 +1,12 @@
+{
+  "name": "autoSaveGuard_v4.0",
+  "type": "Model",
+  "zone": "ZONE-1",
+  "description": "保存漏れの検出と自動補助を行う設計思想ベースの構造体。Ver.4.0ではテンプレート依存を排し、構造体単位の補完を自動化。",
+  "registry": {
+    "trigger": "保存忘れ検出",
+    "action": "保存候補提示・自動補完",
+    "integration": "BUILD-MODE常駐・commandTracker連携"
+  },
+  "swiftCode": "\n// AutoSaveGuard Swiftコード構造体\nstruct AutoSaveGuard {\n  var triggerRules: [String]\n  func evaluate(savePending: Bool) -> Bool {\n    return savePending && triggerRules.contains(\"未保存\")\n  }\n}\n"
+}

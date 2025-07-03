@@ -1,0 +1,14 @@
+{
+  "name": "swiftTypeRegistry_v2",
+  "type": "Model",
+  "zone": "ZONE-1",
+  "description": "Swiftの型設計に準拠し、構造分類における基本型（Struct / Class / Enum / Protocol / Extension）とその用法を整理した辞書構造。",
+  "registry": {
+    "Struct": "値型。軽量なデータ構造に適し、主にModel / Structなどに使用。",
+    "Class": "参照型。継承や共有を必要とする構造で使用される。",
+    "Enum": "選択肢や状態を明示するための列挙型。状態管理などに使用。",
+    "Protocol": "機能の約束事を定義する型。構造間の共通インターフェースとして使用。",
+    "Extension": "既存型に機能を追加するための定義。モジュール化に貢献する。"
+  },
+  "swiftCode": "enum SwiftType: String {\n  case structType = \"Struct\"\n  case classType = \"Class\"\n  case enumType = \"Enum\"\n  case protocolType = \"Protocol\"\n  case extensionType = \"Extension\"\n\n  var description: String {\n    switch self {\n    case .structType:\n      return \"値型。軽量なデータ構造に適し、主にModel / Structなどに使用。\"\n    case .classType:\n      return \"参照型。継承や共有を必要とする構造で使用される。\"\n    case .enumType:\n      return \"選択肢や状態を明示するための列挙型。状態管理などに使用。\"\n    case .protocolType:\n      return \"機能の約束事を定義する型。構造間の共通インターフェースとして使用。\"\n    case .extensionType:\n      return \"既存型に機能を追加するための定義。モジュール化に貢献する。\"\n    }\n  }\n}"
+}

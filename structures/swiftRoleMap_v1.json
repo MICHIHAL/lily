@@ -1,0 +1,14 @@
+{
+  "name": "swiftRoleMap_v1",
+  "type": "Model",
+  "zone": "ZONE-1",
+  "description": "Swiftにおける構造分類（Model / View / UI / Func / Struct）とその役割・責務を定義する中核マップ。構造命名・保存先・型定義の整合性を保証する。",
+  "registry": {
+    "Model": "データや状態を保持する構造体。例：保存用構造、状態管理、設計辞書",
+    "View": "演出やアニメーションなど、動的に表示される構造体",
+    "UI": "静的画面・レイアウト構造を定義する表示用構造体",
+    "Func": "再利用可能な命令・処理ブロック。例：保存命令、呼び出し関数",
+    "Struct": "View/UI/Funcを統合し、運用上呼び出される複合実行体"
+  },
+  "swiftCode": "struct SwiftRoleMap {\n  enum Role: String {\n    case model = \"Model\"\n    case view = \"View\"\n    case ui = \"UI\"\n    case funcBlock = \"Func\"\n    case compositeStruct = \"Struct\"\n  }\n\n  static let descriptions: [Role: String] = [\n    .model: \"データや状態を保持する構造体\",\n    .view: \"動的に表示される演出構造体\",\n    .ui: \"静的なUI画面・レイアウト構造体\",\n    .funcBlock: \"再利用可能な命令・処理ブロック\",\n    .compositeStruct: \"View/UI/Funcを統合した複合実行構造体\"\n  ]\n}"
+}

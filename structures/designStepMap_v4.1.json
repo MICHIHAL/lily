@@ -1,0 +1,53 @@
+{
+  "name": "designStepMap_v4.1",
+  "type": "Model",
+  "zone": "ZONE-1",
+  "description": "Swift準拠設計に基づき、開発フローを段階化して管理する構造。リリー構築における思考順・整合性・保存タイミングを整理し、寄り道対策やフェーズ確認にも活用される。",
+  "steps": [
+    {
+      "step": 0,
+      "title": "目的と設計思想の明文化",
+      "focus": "思想・方針・人格・適用ルールの定義",
+      "linkedModels": [
+        "brainLayer_v2",
+        "projectAnswerInstruction_v4.1"
+      ]
+    },
+    {
+      "step": 1,
+      "title": "脳層構造の整備",
+      "focus": "辞書・構造分類・メモリ方式の明確化",
+      "linkedModels": [
+        "swiftTypeRegistry_v2_with_code",
+        "memoryPolicy_v4.0",
+        "versionTracker_v1.0"
+      ]
+    },
+    {
+      "step": 2,
+      "title": "命令構文と保存ルールの定義",
+      "focus": "命令記法・保存関数・自動保存・構文監視の整備",
+      "linkedModels": [
+        "saveFunc",
+        "autoSaveGuard_v4.0",
+        "structureSyntaxGuard_v3.1",
+        "defineAndSavePolicy_v4.2"
+      ]
+    },
+    {
+      "step": 3,
+      "title": "実行ツールの構造定義",
+      "focus": "BUILD支援や構文監視などのツール読み込み順制御",
+      "linkedModels": [
+        "toolLoadOrder_v4.0"
+      ]
+    },
+    {
+      "step": 4,
+      "title": "統合パッケージ設計",
+      "focus": "構造出力の形式統一と再利用可能なファイル生成",
+      "linkedModels": []
+    }
+  ],
+  "notes": "この構造は Ver.4 系の全設計フローに適用され、進行状況・保存整合性・再構築順の基準として運用される。"
+}

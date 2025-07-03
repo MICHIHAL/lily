@@ -1,0 +1,12 @@
+{
+  "name": "structureScopeMap_v2",
+  "type": "Model",
+  "zone": "ZONE-1",
+  "description": "構造体を運用する際の使用スコープ（tool / build / app）を定義し、管理の役割分担を明確化する。",
+  "registry": {
+    "tool": "設計・命名・ルールなどの構造化ツール群を扱う",
+    "build": "アプリやゲーム構造そのものの開発・試作を行う",
+    "app": "Swift等のアプリ実装に向けて出力・調整する"
+  },
+  "swiftCode": "struct StructureScopeMap {\n  enum Scope: String {\n    case tool, build, app\n  }\n  static let definitions: [Scope: String] = [\n    .tool: \"設計・命名・ルールなどの構造化ツール群\",\n    .build: \"構造そのものの開発・試作\",\n    .app: \"Swift実装に向けた出力\"\n  ]\n}"
+}

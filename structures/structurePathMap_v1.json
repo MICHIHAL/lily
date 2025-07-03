@@ -1,0 +1,19 @@
+{
+  "brainLayer": {
+    "swiftTypeRegistry_v2": "code/brain/swiftTypeRegistry_v2.json",
+    "structureScopeMap_v1": "code/brain/structureScopeMap_v1.json",
+    "structureRoleMap_v1": "code/brain/structureRoleMap_v1.json",
+    "brainLayerModel_v1_full": "code/brain/brainLayerModel_v1_full.json"
+  },
+  "policyLayer": {
+    "defineAndSavePolicy_v4.1": "code/policy/defineAndSavePolicy_v4.1.json",
+    "memoryPolicy_v3.1": "code/policy/memoryPolicy_v3.1.json",
+    "autoSaveGuard_v3.0": "code/policy/autoSaveGuard_v3.0.json",
+    "structureDefinitionRule_v1": "code/policy/structureDefinitionRule_v1.json"
+  },
+  "toolLayer": {
+    "saveFunc": "code/tool/saveFunc.json",
+    "generateStructureFunc": "code/tool/generateStructureFunc.json",
+    "structureSyntaxGuard_v3.0": "code/tool/structureSyntaxGuard_v3.0.json"
+  }
+}

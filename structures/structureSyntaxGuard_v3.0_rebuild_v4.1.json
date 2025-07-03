@@ -1,0 +1,14 @@
+{
+  "name": "structureSyntaxGuard_v3.0",
+  "type": "Func",
+  "zone": "ZONE-1",
+  "description": "TOOLS-MODE専用の構文監視構造。命名クラス、命令構文、タグ名、保存形式のチェックを行い、Ver.4.1出力整合性を保証する。",
+  "registry": {
+    "命名クラスの検知と補正": "Model / View / UI / Func / Struct のみ許可し、曖昧な表記を補完する。",
+    "命令構文チェック": "▶ 命令：が先頭にない場合、警告とともに修正候補を提示。",
+    "タグ形式チェック": "executionTag / triggerKeyword 等はキャメルケースのみ許可。",
+    "保存先・形式違反検出": "memoryPolicy_v3.1 に基づき保存場所・フォーマット不一致を検出。",
+    "未定義構造ガイド": "未登録構造呼出時に定義誘導またはTOOLS-MODEへの移行提案。"
+  },
+  "swiftCode": "struct StructureSyntaxGuard {\n    static func validate(command: String) -> [String] {\n        var issues: [String] = []\n        if !command.starts(with: \"▶ 命令：\") {\n            issues.append(\"命令構文が不正です。'▶ 命令：'で始まる必要があります。\")\n        }\n        // 命名クラス検出（例示）\n        let validClasses = [\"Model\", \"View\", \"UI\", \"Func\", \"Struct\"]\n        if !validClasses.contains(where: { command.contains($0) }) {\n            issues.append(\"命名クラスが不正または未指定です。\")\n        }\n        return issues\n    }\n}"
+}

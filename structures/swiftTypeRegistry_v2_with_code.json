@@ -1,0 +1,14 @@
+{
+  "name": "swiftTypeRegistry_v2",
+  "type": "Model",
+  "zone": "ZONE-1",
+  "description": "Swift構造のタイプ分類。GPT内部定義とSwift設計との整合をとる辞書構造。",
+  "registry": {
+    "Model": "ステータス・保存構造などの設計用構造体",
+    "View": "演出・反応・アニメーション系の動作構造",
+    "UI": "表示・ボタン・画面構成などの静的UI構造",
+    "Func": "命令文や操作処理のひな形",
+    "Struct": "UI/View/Funcを統合した複合実行構成体"
+  },
+  "swiftCode": "enum SwiftStructureType: String {\n    case model = \"Model\"\n    case view = \"View\"\n    case ui = \"UI\"\n    case funcBlock = \"Func\"\n    case structUnit = \"Struct\"\n}"
+}

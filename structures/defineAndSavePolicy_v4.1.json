@@ -1,0 +1,14 @@
+{
+  "name": "defineAndSavePolicy_v4.1",
+  "type": "Model",
+  "zone": "ZONE-1",
+  "description": "構造体の定義と保存を同時に実行するための設計方針。保存忘れ・不整合を防ぐ中核ルール。",
+  "version": "4.1",
+  "registry": {
+    "autoSave": "定義命令実行時に自動で保存処理を行う",
+    "zoneValidation": "保存先ZONEがmemoryPolicy_v4.0に準拠しているかチェック",
+    "referentialCorrection": "修正時に参照元構造体も更新候補として記録",
+    "saveLog": "保存処理を versionTracker_v1.0 に記録"
+  },
+  "swiftCode": "// defineAndSavePolicy_v4.1\nstruct DefineAndSavePolicy {\n    func defineAndSave(structure: Any, zone: String) {\n        guard memoryPolicy_v4_0.validate(zone: zone) else { return }\n        versionTracker.recordSave(structureName: String(describing: type(of: structure)))\n    }\n}"
+}

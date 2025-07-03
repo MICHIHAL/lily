@@ -1,0 +1,87 @@
+{
+  "name": "structureIndexMap_v4.1",
+  "type": "Model",
+  "zone": "ZONE-1",
+  "description": "構造体群の全体一覧とバージョン・ZONE・責務を記録するインデックス。構造管理と外部保存の整合性を保つための統括用データ。",
+  "structures": [
+    {
+      "name": "brainLayer_v2",
+      "type": "Model",
+      "zone": "ZONE-1",
+      "version": "2.0",
+      "description": "脳層の辞書・設計思想全般"
+    },
+    {
+      "name": "memoryPolicy_v4.0",
+      "type": "Model",
+      "zone": "ZONE-1",
+      "version": "4.0",
+      "description": "ZONE別の記憶・保存ポリシー"
+    },
+    {
+      "name": "projectAnswerInstruction_v4.1",
+      "type": "Model",
+      "zone": "ZONE-1",
+      "version": "4.1",
+      "description": "リリーの回答方針・人格・構文制約"
+    },
+    {
+      "name": "structureSyntaxGuard_v3.1",
+      "type": "Model",
+      "zone": "ZONE-1",
+      "version": "3.1",
+      "description": "命名・構文の表記ブレ防止"
+    },
+    {
+      "name": "defineAndSavePolicy_v4.2_updated",
+      "type": "Model",
+      "zone": "ZONE-1",
+      "version": "4.2",
+      "description": "定義と保存を同時に処理する最新ポリシー"
+    },
+    {
+      "name": "saveFunc",
+      "type": "Func",
+      "zone": "ZONE-1",
+      "version": "1.0",
+      "description": "構造体やデータを保存するための関数定義"
+    },
+    {
+      "name": "toolLoadOrder_v4.0",
+      "type": "Model",
+      "zone": "ZONE-1",
+      "version": "4.0",
+      "description": "構造読み込み順序を定義するツール用構造"
+    },
+    {
+      "name": "versionTracker_v1.0",
+      "type": "Model",
+      "zone": "ZONE-1",
+      "version": "1.0",
+      "description": "構造のバージョン管理と変更履歴追跡"
+    },
+    {
+      "name": "swiftRoleMap_v1",
+      "type": "Model",
+      "zone": "ZONE-1",
+      "version": "1.0",
+      "description": "Swiftの構造分類と役割マッピング"
+    },
+    {
+      "name": "autoSaveGuard_v4.0",
+      "type": "Model",
+      "zone": "ZONE-1",
+      "version": "4.0",
+      "description": "保存忘れを検出し介入する支援構造体"
+    },
+    {
+      "name": "designStepMap_v4.1",
+      "type": "Model",
+      "zone": "ZONE-1",
+      "version": "4.1",
+      "description": "設計の進行ステップと整合確認のためのマップ"
+    }
+  ],
+  "notes": "このファイルをアップデートすることで、プロジェクトの構造全体を追跡・制御できる。",
+  "generated": "2025-07-03T11:10:55.497818"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "structureDefinitionRule_v1",
+  "type": "Model",
+  "zone": "ZONE-1",
+  "description": "リリーにおける構造体の定義ルール。Swiftの構造モデルに準拠し、構造ごとの命名規則、責務、保存形式、ゾーン管理、実行要件を明記するための基本指針。",
+  "registry": {
+    "命名規則": "Swiftの命名規則（UpperCamelCase）。[構造名][ClassType]形式で統一。",
+    "責務": "各構造は単一責務の原則に基づき、明確な目的と機能を持つ。",
+    "保存形式": "JSONで定義。中身（定義内容）をすべて含める構造一体型。",
+    "保存場所": "typeに応じてZONE-1〜3に分類保存。",
+    "実行要件": "Struct型はtriggerKeywordおよびexecutionTagが必要。Model/Funcは構造定義のみで実行不可。",
+    "構文制約": "すべての構造定義は[Swift準拠構造型 + 拡張辞書 + swiftCode]を含むこと。",
+    "再利用性": "構造は必ず一意のnameで識別され、他構造から参照可能でなければならない。"
+  },
+  "swiftCode": "struct StructureDefinitionRule {\n  let nameRule: String\n  let responsibility: String\n  let format: String\n  let zonePolicy: String\n  let executionRequirement: String\n  let syntax: String\n  let reusability: String\n}\n\nlet rule = StructureDefinitionRule(\n  nameRule: \"UpperCamelCase + ClassType\",\n  responsibility: \"単一責務原則に従う\",\n  format: \"中身を含む統合JSON形式\",\n  zonePolicy: \"構造typeに応じてZONE分け保存\",\n  executionRequirement: \"Struct型はtriggerKeywordとexecutionTag必須\",\n  syntax: \"swiftCodeとregistry定義を必ず含む\",\n  reusability: \"nameは一意で他構造から参照可能にする\"\n)"
+}

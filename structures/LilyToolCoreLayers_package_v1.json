@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "packageId": "LilyToolCoreLayers_v1.0",
+    "projectName": "Lily Tools Layered Structure",
+    "author": "ハルくん＆Lily",
+    "version": "1.0",
+    "description": "脳・考え方・ツールの3層で構成されるLily内部構造のレイヤードパッケージ。定義本体（コード）は別ファイルで管理され、後から紐づけ可能な設計。"
+  },
+  "layers": [
+    {
+      "layerName": "brainLayer",
+      "referenceFile": "brainLayer_v2.json",
+      "description": "設計思想・分類辞書・命名ルールなどを含む中心思想層。"
+    },
+    {
+      "layerName": "policyLayer",
+      "referenceFile": "policyLayer_v1.json",
+      "description": "命令構文や保存ルールなど、動作の方針を定める思考ルール層。"
+    },
+    {
+      "layerName": "toolLayer",
+      "referenceFile": "toolLayer_v1.json",
+      "description": "構文ガード・保存関数・自動補助などの動作補助ツール群。"
+    }
+  ],
+  "note": "この構造は定義の“骨格”のみを保持し、各レイヤーのコード本体は別途ファイルで管理・紐付けされる。"
+}

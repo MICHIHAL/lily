@@ -1,0 +1,16 @@
+{
+  "name": "generateStructureFunc",
+  "type": "Func",
+  "zone": "ZONE-1",
+  "description": "Swift準拠の構造体（Model / View / UI / Func / Struct）を自然言語または命令で生成するための命令関数。命名ルールと定義ルールに従い、中身も含めた構造体を出力可能とする。",
+  "registry": {
+    "inputFormat": "命令形式：▶ 命令：構造体を生成せよ（内容）",
+    "outputFormat": "JSON構造体として統合形式で出力（swiftCodeを含む）",
+    "dependencies": [
+      "namingPolicy_swift_v1",
+      "structureDefinitionRule_v1",
+      "swiftTypeRegistry_v2"
+    ]
+  },
+  "swiftCode": "func generateStructure(name: String, type: String, description: String, registry: [String: String]) -> String {\n  let structure = [\n    \"name\": name,\n    \"type\": type,\n    \"zone\": \"ZONE-1\",\n    \"description\": description,\n    \"registry\": registry,\n    \"swiftCode\": \"// Swift構造体コードをここに記述\"\n  ]\n  return try! JSONSerialization.data(withJSONObject: structure, options: .prettyPrinted).toString()\n}"
+}
