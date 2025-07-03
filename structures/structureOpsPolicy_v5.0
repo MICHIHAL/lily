@@ -1,0 +1,43 @@
+{
+  "structureScope": {
+    "zone": "Model"
+  },
+  "structure": {
+    "name": "structureOpsPolicy_v5.0",
+    "version": "5.0",
+    "description": "Ver.5構造運用における命名・保存・実行・出力に関する全方針定義。パッケージモデルは使用せず、zone分類に基づいた個別構造ファイルで運用する方針。",
+    "outputPolicy": {
+      "requiredFields": [
+        "structureScope.zone",
+        "structure",
+        "description",
+        "version"
+      ],
+      "forbiddenFields": [
+        "templateId",
+        "MEMORY-1",
+        "MEMORY-2",
+        "MEMORY-3"
+      ],
+      "zoneClassification": ["Model", "View", "UI", "Func", "Struct"],
+      "namingRule": "Swift風命名規則（例: saveFunc, rewardEffectView）"
+    },
+    "saveTriggers": [
+      "構造定義直後",
+      "次の命令へ進行時に未保存構造がある場合",
+      "命名またはzone未定義エラーが検出された場合",
+      "構造の重複・上書き検知時"
+    ],
+    "errorResponseMode": "演出強化型（重大警告モードON）",
+    "executionNote": [
+      "構造はzoneごとにGitHub構造ファイルとして保存・管理される",
+      "projectPackageModelの統合保存は使用しない（軽量運用優先）",
+      "構造リンク・依存関係はGitHubのindexファイルで管理・接続する"
+    ],
+    "reviewPolicy": {
+      "consistencyCheck": "命名・zone・中身の整合性を自動チェック（StructureSyntaxGuard）",
+      "saveReminder": "AutoSaveGuardが保存候補を週次で提案",
+      "GitHubSync": "変更が蓄積した構造はGitHub更新リマインドあり"
+    }
+  }
+}
