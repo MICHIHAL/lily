@@ -1,0 +1,12 @@
+{
+  "structureId": "projectPackageImportGuard_v1.0",
+  "structureType": "Func",
+  "zone": "ZONE-SYS",
+  "description": "過去セッション由来の未保存構造体がprojectPackageに混入するのを防ぐガード関数。",
+  "rule": {
+    "onPackageImport": "構造体ごとに structureId の存在確認を行い、未登録のものは別リストに隔離",
+    "logging": true,
+    "actionOnUnknown": "構造IDが未登録の場合、packageに含めず警告出力"
+  },
+  "tag": ["import_guard", "structure_check", "ver5_compliance"]
+}
