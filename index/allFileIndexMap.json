@@ -90,6 +90,16 @@
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/generateStructureFunc.json"
   },
   {
+    "fileName": "generateStructureIndex_fromRawFiles_v5.json",
+    "folder": "structures",
+    "name": "(未定義)",
+    "type": "(type不明)",
+    "zone": "ZONE-1",
+    "version": "不明",
+    "description": "GitHubのallFileIndexMap.jsonを起点に全ファイルをRAW URL経由で取得し、各JSONファイルの構造内容（structureType, zone, tag, versionなど）を読み取って、新しいVer.5準拠インデックスを自動生成する処理構造。",
+    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/generateStructureIndex_fromRawFiles_v5.json"
+  },
+  {
     "fileName": "memoryPolicy_v4.0.json",
     "folder": "structures",
     "name": "memoryPolicy_v4.0",
