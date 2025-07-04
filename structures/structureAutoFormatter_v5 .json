@@ -1,0 +1,25 @@
+{
+  "structureId": "structureAutoFormatter_v5",
+  "structureType": "Func",
+  "zone": "ZONE-1",
+  "description": "Ver.5準拠構造に整形するための自動フォーマット関数。必要項目（structureId, structureType, zoneなど）を補完し、不足があるファイルを準拠構造として出力する。",
+  "input": {
+    "rawStructure": "任意のJSON構造（Ver.5未準拠）"
+  },
+  "output": {
+    "formattedStructure": {
+      "structureId": "推定ID（ファイル名から生成）",
+      "structureType": "推定型（内容に応じて Model / View / UI / Func / Struct）",
+      "zone": "推定ZONE（typeに応じて自動補完）",
+      "description": "空欄なら暫定補足を挿入",
+      "structure": "元データ構造"
+    }
+  },
+  "rules": {
+    "structureId": "ファイル名または既存IDから抽出／生成",
+    "structureType": "命名や内容から自動推定",
+    "zone": "structureTypeに準拠したZONE（MemoryPolicy_v3.1準拠）",
+    "tag": "構造から自動推測。なければ空配列でOK"
+  },
+  "tag": ["formatter", "autoFix", "ver5_compliance"]
+}
