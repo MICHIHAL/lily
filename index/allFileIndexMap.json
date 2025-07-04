@@ -200,6 +200,16 @@
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/structureIndexMap_v4.1.json"
   },
   {
+    "fileName": "structureIndexPolicy_v1.1.json",
+    "folder": "structures",
+    "name": "(未定義)",
+    "type": "(type不明)",
+    "zone": "ZONE-SYS",
+    "version": "不明",
+    "description": "`allFileIndexMap.json` をインデックスとして正式運用するための定義と検証ポリシーの統合構造。構造分類、フィールド検証、RAWURLの確認と読み込み補完処理を一括制御。",
+    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/structureIndexPolicy_v1.1.json"
+  },
+  {
     "fileName": "structureOpsPolicy_v5.0.json",
     "folder": "structures",
     "name": "(未定義)",
