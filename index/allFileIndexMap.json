@@ -170,6 +170,16 @@
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/selfEvolutionLogModel_v1.1.json"
   },
   {
+    "fileName": "structureAutoFormatter_v5 .json",
+    "folder": "structures",
+    "name": "(未定義)",
+    "type": "(type不明)",
+    "zone": "ZONE-1",
+    "version": "不明",
+    "description": "Ver.5準拠構造に整形するための自動フォーマット関数。必要項目（structureId, structureType, zoneなど）を補完し、不足があるファイルを準拠構造として出力する。",
+    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/structureAutoFormatter_v5 .json"
+  },
+  {
     "fileName": "structureDefinitionRule_v1.json",
     "folder": "structures",
     "name": "structureDefinitionRule_v1",
