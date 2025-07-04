@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "fileName": "deprecatedIndex_v1.0.json",
+    "version": "v1.0",
+    "description": "Ver.5移行対応のため、旧形式構造ファイルを整理・削除対象としてリストアップした管理ファイル。",
+    "generated": "2025-07-04",
+    "author": "Lily"
+  },
+  "deprecatedFiles": [
+    {
+      "fileName": "giftDialogueTemplate_v1.0.json",
+      "deprecatedReason": "Ver.5命名ルール（View構造）未準拠のため",
+      "replacedBy": "giftDialogueView_v5.0"
+    },
+    {
+      "fileName": "summonPersonaTemplate_v1.2.json",
+      "deprecatedReason": "旧template命名＋Struct分類未準拠",
+      "replacedBy": "personaSummonStruct_v5.0"
+    },
+    {
+      "fileName": "statusDisplayTemplate_v1.0.json",
+      "deprecatedReason": "UI構造未分類＋旧命名形式",
+      "replacedBy": "statusPanelUI_v5.0"
+    },
+    {
+      "fileName": "saveFunc.json",
+      "deprecatedReason": "命名ルール未準拠・zone未定義のため",
+      "replacedBy": "saveFunc_v5.0"
+    },
+    {
+      "fileName": "personaSummonStruct.json",
+      "deprecatedReason": "Ver.5 zoneおよびタグ管理未適用",
+      "replacedBy": "personaSummonStruct_v5.0"
+    }
+  ]
+}
