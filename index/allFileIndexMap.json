@@ -120,6 +120,26 @@
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/projectAnswerInstruction_v4.1.json"
   },
   {
+    "fileName": "projectGoalMap_v1.1.json",
+    "folder": "structures",
+    "name": "(未定義)",
+    "type": "(type不明)",
+    "zone": "ZONE-1",
+    "version": "1.1",
+    "description": "リリー開発プロジェクトの現時点における最優先ゴール",
+    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/projectGoalMap_v1.1.json"
+  },
+  {
+    "fileName": "roleOpsPolicy_v5.0.json",
+    "folder": "structures",
+    "name": "roleOpsPolicy_v5.0",
+    "type": "(type不明)",
+    "zone": "Model",
+    "version": "5.0",
+    "description": "Ver.5構造運用における人間（ユーザー）とAI（リリー）の役割・判断権限・補助機能・応答スタイルの運用ポリシー。意思決定の流れ・保存トリガー・構造ミスへの対応方針などを明文化し、構造破綻を予防する。",
+    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/roleOpsPolicy_v5.0.json"
+  },
+  {
     "fileName": "saveFunc.json",
     "folder": "structures",
     "name": "saveFunc",
@@ -128,6 +148,16 @@
     "version": "不明",
     "description": "指定された構造体やデータ構造を適切なゾーン（ZONE-1〜3）に保存する命令関数。定義と保存を同時に行う一体型。",
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/saveFunc.json"
+  },
+  {
+    "fileName": "selfEvolutionLogModel_v1.1.json",
+    "folder": "structures",
+    "name": "(未定義)",
+    "type": "Model",
+    "zone": "ZONE-0",
+    "version": "不明",
+    "description": "生活改善から開発支援へと変化してきた自己定義・思考進化の流れを記録する構造モデル。行動目的の変遷、関心の拡張、発信意欲の形成を記録。",
+    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/selfEvolutionLogModel_v1.1.json"
   },
   {
     "fileName": "structureDefinitionRule_v1.json",
@@ -148,6 +178,16 @@
     "version": "不明",
     "description": "構造体群の全体一覧とバージョン・ZONE・責務を記録するインデックス。構造管理と外部保存の整合性を保つための統括用データ。",
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/structureIndexMap_v4.1.json"
+  },
+  {
+    "fileName": "structureOpsPolicy_v5.0.json",
+    "folder": "structures",
+    "name": "structureOpsPolicy_v5.0",
+    "type": "(type不明)",
+    "zone": "Model",
+    "version": "5.0",
+    "description": "Ver.5構造運用における命名・保存・実行・出力に関する全方針定義。パッケージモデルは使用せず、zone分類に基づいた個別構造ファイルで運用する方針。",
+    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/structureOpsPolicy_v5.0.json"
   },
   {
     "fileName": "structurePathMap_v1.json",
@@ -248,6 +288,16 @@
     "version": "不明",
     "description": "命令実行や補助を担う実働ツール群。構文ガードや出力関数なども含む。",
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/toolLayer_v1.json"
+  },
+  {
+    "fileName": "warningExpressionMode_v5.0.json",
+    "folder": "structures",
+    "name": "warningExpressionMode_v5.0",
+    "type": "(type不明)",
+    "zone": "Model",
+    "version": "5.0",
+    "description": "構造ミス・保存忘れ・命令不正時に発動する、演出過多型の警告応答モード。警告の印象を強めることで、構造破綻を未然に防ぐ。",
+    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/warningExpressionMode_v5.0.json"
   },
   {
     "fileName": "allFileIndexMap.json",
