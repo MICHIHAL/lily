@@ -2,32 +2,30 @@
   "structureId": "structureIndexPolicy_v1.1",
   "structureType": "Model",
   "zone": "ZONE-SYS",
-  "description": "`allFileIndexMap.json` をインデックスとして正式運用するための定義と検証ポリシーの統合構造。構造分類、フィールド検証、RAWURLの確認と読み込み補完処理を一括制御。",
-  "indexSpec": {
-    "requiredFields": ["fileName", "name", "type", "zone", "rawUrl"],
-    "optionalFields": ["version", "description", "tag"],
-    "usageNote": "不足項目がある場合は補完・保留処理に移行する"
-  },
-  "verificationRules": {
-    "missingVersion": "不明のまま保持",
-    "missingTag": "補完候補を提示するが即付与はしない",
-    "rawUrl": {
-      "mustBeHttps": true,
-      "mustContain": "https://raw.githubusercontent.com/MICHIHAL/lily/",
-      "onError": "読み込み不可として除外または警告表示"
+  "description": "構造ファイルのインデックス形式と読み込み方針を定義する。GitHub上のallFileIndexMap.jsonを正式な構造インデックスとして使用。",
+  "rules": {
+    "indexFile": "allFileIndexMap.json",
+    "requiredFields": [
+      "fileName",
+      "folder",
+      "name",
+      "type",
+      "zone",
+      "rawUrl"
+    ],
+    "validationPolicy": {
+      "rawUrl": "URL形式であり、生存チェック可能であること",
+      "type": ["Model", "View", "UI", "Func", "Struct"],
+      "zone": ["ZONE-0", "ZONE-1", "ZONE-2", "ZONE-3", "ZONE-SYS"]
     },
-    "unknownType": "typeが不明なら分類保留。要手動判定。",
-    "structureBody": "rawUrl先で必要時のみ読み込み"
+    "fallbackPolicy": {
+      "missingFields": "警告を出しつつスルー",
+      "type未定義": "Modelに仮設定",
+      "zone未定義": "ZONE-1に仮設定"
+    },
+    "reference": {
+      "source": "https://raw.githubusercontent.com/MICHIHAL/lily/refs/heads/main/index/allFileIndexMap.json"
+    }
   },
-  "sourceIndex": {
-    "indexFileName": "allFileIndexMap.json",
-    "indexRawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/refs/heads/main/index/allFileIndexMap.json",
-    "indexPurpose": "すべての構造ファイルを横断的に分類・収録した統合インデックス"
-  },
-  "tag": [
-    "structureIndex",
-    "indexDeclaration",
-    "indexGuard",
-    "ver5_compliance"
-  ]
+  "tag": ["indexPolicy", "structureValidation", "ver5_compliance"]
 }
