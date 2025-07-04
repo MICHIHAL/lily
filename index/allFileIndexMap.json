@@ -2,7 +2,7 @@
   {
     "fileName": "LilyToolCoreLayers_package_v1.json",
     "folder": "structures",
-    "name": "(未定義)",
+    "name": "LilyToolCoreLayers_package_v1",
     "type": "(type不明)",
     "zone": "(ZONE不明)",
     "version": "不明",
@@ -22,7 +22,7 @@
   {
     "fileName": "brainLayer_v2.json",
     "folder": "structures",
-    "name": "(未定義)",
+    "name": "brainLayer_v2",
     "type": "(type不明)",
     "zone": "(ZONE不明)",
     "version": "不明",
@@ -32,7 +32,7 @@
   {
     "fileName": "commandSyntax_andExecutionModels_v4.json",
     "folder": "structures",
-    "name": "(未定義)",
+    "name": "commandSyntax_andExecutionModels_v4",
     "type": "(type不明)",
     "zone": "(ZONE不明)",
     "version": "不明",
@@ -52,7 +52,7 @@
   {
     "fileName": "defineAndSavePolicy_v4.2_updated.json",
     "folder": "structures",
-    "name": "(未定義)",
+    "name": "defineAndSavePolicy_v4.2_updated",
     "type": "(type不明)",
     "zone": "(ZONE不明)",
     "version": "v4.2",
@@ -92,7 +92,7 @@
   {
     "fileName": "generateStructureIndex_fromRawFiles_v5.json",
     "folder": "structures",
-    "name": "(未定義)",
+    "name": "generateStructureIndex_fromRawFiles_v5",
     "type": "(type不明)",
     "zone": "ZONE-1",
     "version": "不明",
@@ -112,7 +112,7 @@
   {
     "fileName": "policyLayer_v1.json",
     "folder": "structures",
-    "name": "(未定義)",
+    "name": "policyLayer_v1",
     "type": "(type不明)",
     "zone": "(ZONE不明)",
     "version": "不明",
@@ -132,7 +132,7 @@
   {
     "fileName": "projectGoalMap_v1.1.json",
     "folder": "structures",
-    "name": "(未定義)",
+    "name": "projectGoalMap_v1.1",
     "type": "(type不明)",
     "zone": "ZONE-0",
     "version": "v1.1",
@@ -144,9 +144,9 @@
     "folder": "structures",
     "name": "roleOpsPolicy_v5.0",
     "type": "(type不明)",
-    "zone": "Model",
-    "version": "5.0",
-    "description": "Ver.5構造運用における人間（ユーザー）とAI（リリー）の役割・判断権限・補助機能・応答スタイルの運用ポリシー。意思決定の流れ・保存トリガー・構造ミスへの対応方針などを明文化し、構造破綻を予防する。",
+    "zone": "(ZONE不明)",
+    "version": "不明",
+    "description": "(説明なし)",
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/roleOpsPolicy_v5.0.json"
   },
   {
@@ -162,7 +162,7 @@
   {
     "fileName": "selfEvolutionLogModel_v1.1.json",
     "folder": "structures",
-    "name": "(未定義)",
+    "name": "selfEvolutionLogModel_v1.1",
     "type": "Model",
     "zone": "ZONE-0",
     "version": "不明",
@@ -172,7 +172,7 @@
   {
     "fileName": "structureAutoFormatter_v5 .json",
     "folder": "structures",
-    "name": "(未定義)",
+    "name": "structureAutoFormatter_v5 ",
     "type": "(type不明)",
     "zone": "ZONE-1",
     "version": "不明",
@@ -202,7 +202,7 @@
   {
     "fileName": "structureIndexPolicy_v1.1.json",
     "folder": "structures",
-    "name": "(未定義)",
+    "name": "structureIndexPolicy_v1.1",
     "type": "(type不明)",
     "zone": "ZONE-SYS",
     "version": "不明",
@@ -212,7 +212,7 @@
   {
     "fileName": "structureOpsPolicy_v5.0.json",
     "folder": "structures",
-    "name": "(未定義)",
+    "name": "structureOpsPolicy_v5.0",
     "type": "(type不明)",
     "zone": "ZONE-SYS",
     "version": "不明",
@@ -222,7 +222,7 @@
   {
     "fileName": "structurePathMap_v1.json",
     "folder": "structures",
-    "name": "(未定義)",
+    "name": "structurePathMap_v1",
     "type": "(type不明)",
     "zone": "(ZONE不明)",
     "version": "不明",
@@ -312,7 +312,7 @@
   {
     "fileName": "toolLayer_v1.json",
     "folder": "structures",
-    "name": "(未定義)",
+    "name": "toolLayer_v1",
     "type": "(type不明)",
     "zone": "(ZONE不明)",
     "version": "不明",
@@ -324,20 +324,30 @@
     "folder": "structures",
     "name": "warningExpressionMode_v5.0",
     "type": "(type不明)",
-    "zone": "Model",
-    "version": "5.0",
-    "description": "構造ミス・保存忘れ・命令不正時に発動する、演出過多型の警告応答モード。警告の印象を強めることで、構造破綻を未然に防ぐ。",
+    "zone": "(ZONE不明)",
+    "version": "不明",
+    "description": "(説明なし)",
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/warningExpressionMode_v5.0.json"
   },
   {
     "fileName": "▶ 命令：projectPackageImportGuard_v1.0 .json",
     "folder": "structures",
-    "name": "(未定義)",
+    "name": "▶ 命令：projectPackageImportGuard_v1.0 ",
     "type": "(type不明)",
     "zone": "ZONE-SYS",
     "version": "不明",
     "description": "過去セッション由来の未保存構造体がprojectPackageに混入するのを防ぐガード関数。",
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/▶ 命令：projectPackageImportGuard_v1.0 .json"
+  },
+  {
+    "fileName": "deprecatedIndex_v1.0.json",
+    "folder": "scripts",
+    "name": "(未定義)",
+    "type": "(type不明)",
+    "zone": "(ZONE不明)",
+    "version": "不明",
+    "description": "(説明なし)",
+    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/scripts/deprecatedIndex_v1.0.json"
   },
   {
     "fileName": "allFileIndexMap.json",
@@ -368,75 +378,5 @@
     "version": "不明",
     "description": "(説明なし)",
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/index/structureIndexMap_with_rawUrl.json"
-  },
-  {
-    "fileName": "addRawUrls.js",
-    "folder": "scripts",
-    "name": "(未定義)",
-    "type": "(type不明)",
-    "zone": "(ZONE不明)",
-    "version": "不明",
-    "description": "(説明なし)",
-    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/scripts/addRawUrls.js"
-  },
-  {
-    "fileName": "deleteDeprecatedFiles.js",
-    "folder": "scripts",
-    "name": "(未定義)",
-    "type": "(type不明)",
-    "zone": "(ZONE不明)",
-    "version": "不明",
-    "description": "(説明なし)",
-    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/scripts/deleteDeprecatedFiles.js"
-  },
-  {
-    "fileName": "deprecatedIndex_v1.0.json",
-    "folder": "scripts",
-    "name": "(未定義)",
-    "type": "(type不明)",
-    "zone": "(ZONE不明)",
-    "version": "不明",
-    "description": "(説明なし)",
-    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/scripts/deprecatedIndex_v1.0.json"
-  },
-  {
-    "fileName": "fixUndefinedStructures.js",
-    "folder": "scripts",
-    "name": "(未定義)",
-    "type": "(type不明)",
-    "zone": "(ZONE不明)",
-    "version": "不明",
-    "description": "(説明なし)",
-    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/scripts/fixUndefinedStructures.js"
-  },
-  {
-    "fileName": "generateAllFileIndex.js",
-    "folder": "scripts",
-    "name": "(未定義)",
-    "type": "(type不明)",
-    "zone": "(ZONE不明)",
-    "version": "不明",
-    "description": "(説明なし)",
-    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/scripts/generateAllFileIndex.js"
-  },
-  {
-    "fileName": "generateIndex.js",
-    "folder": "scripts",
-    "name": "(未定義)",
-    "type": "(type不明)",
-    "zone": "(ZONE不明)",
-    "version": "不明",
-    "description": "(説明なし)",
-    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/scripts/generateIndex.js"
-  },
-  {
-    "fileName": "index.html",
-    "folder": "viewer",
-    "name": "(未定義)",
-    "type": "(type不明)",
-    "zone": "(ZONE不明)",
-    "version": "不明",
-    "description": "(説明なし)",
-    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/viewer/index.html"
   }
 ]
