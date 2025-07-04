@@ -182,11 +182,11 @@
   {
     "fileName": "structureOpsPolicy_v5.0.json",
     "folder": "structures",
-    "name": "structureOpsPolicy_v5.0",
+    "name": "(未定義)",
     "type": "(type不明)",
-    "zone": "Model",
-    "version": "5.0",
-    "description": "Ver.5構造運用における命名・保存・実行・出力に関する全方針定義。パッケージモデルは使用せず、zone分類に基づいた個別構造ファイルで運用する方針。",
+    "zone": "ZONE-SYS",
+    "version": "不明",
+    "description": "構造保存と命名・分類に関する統合ポリシー。パッケージモデルを使用せず、各構造は単体定義＋ZONEx分類＋タグ管理で運用する。",
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/structureOpsPolicy_v5.0.json"
   },
   {
