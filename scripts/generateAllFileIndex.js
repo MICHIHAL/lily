@@ -26,15 +26,15 @@ indexDirs.forEach(dir => {
       }
 
       index.push({
-        fileName: file,
-        folder: dir,
-        name: content.name || "(未定義)",
-        type: content.type || "(type不明)",
-        zone: content.zone || "(ZONE不明)",
-        version: content.version || "不明",
-        description: content.description || "(説明なし)",
-        rawUrl: `${baseRawUrl}/${dir}/${file}`
-      });
+  fileName: file,
+  folder: dir,
+  name: content.structure?.name || content.name || "(未定義)",
+  type: content.structure?.type || content.type || "(type不明)",
+  zone: content.structureScope?.zone || content.zone || "(ZONE不明)",
+  version: content.structure?.version || content.version || "不明",
+  description: content.structure?.description || content.description || "(説明なし)",
+  rawUrl: `${baseRawUrl}/${dir}/${file}`
+});
     }
   });
 });
