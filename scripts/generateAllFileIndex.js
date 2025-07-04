@@ -1,43 +1,85 @@
-// scripts/generateAllFileIndex.js
+const fs = require('fs');
+const path = require('path');
 
-const fs = require("fs");
-const path = require("path");
+const structureDir = path.join(__dirname, '../structures');
+const indexDir = path.join(__dirname, '../index');
+const outputFile = path.join(indexDir, 'allFileIndexMap.json');
 
-const baseRawUrl = "https://raw.githubusercontent.com/MICHIHAL/lily/main";
+function readJsonFilesFromDir(dirPath) {
+  const fileList = fs.readdirSync(dirPath);
+  return fileList
+    .filter(file => file.endsWith('.json'))
+    .map(file => {
+      const filePath = path.join(dirPath, file);
+      const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
-const indexDirs = ["structures", "index", "scripts", "viewer"]; // 必要に応じて追加
-const outputPath = path.join(__dirname, "../index/allFileIndexMap.json");
+      return {
+        fileName: file,
+        folder: path.basename(dirPath),
+        name: data.name || '(未定義)',
+        type: data.type || '(type不明)',
+        zone: data.zone || '(ZONE不明)',
+        version: data.version || '不明',
+        description: data.description || '(説明なし)',
+        rawUrl: `https://raw.githubusercontent.com/MICHIHAL/lily/main/${path.basename(dirPath)}/${file}`
+      };
+    });
+}
 
-const index = [];
+// 🧠 未定義項目を補完するロジックを追加
+function autoFixStructureIndex(structureList) {
+  const typeMap = {
+    'Model': 'ZONE-1',
+    'Func': 'ZONE-1',
+    'View': 'ZONE-3',
+    'UI': 'ZONE-3',
+    'Struct': 'ZONE-3'
+  };
 
-indexDirs.forEach(dir => {
-  const fullDirPath = path.join(__dirname, "..", dir);
+  return structureList.map(item => {
+    if (item.folder !== 'structures') return item;
 
-  if (!fs.existsSync(fullDirPath)) return;
+    let name = item.name;
+    if (!name || name === '(未定義)') {
+      name = item.fileName.replace('.json', '');
+    }
 
-  fs.readdirSync(fullDirPath).forEach(file => {
-    if (file.endsWith(".json") || file.endsWith(".js") || file.endsWith(".html")) {
-      const filePath = path.join(fullDirPath, file);
-      let content = {};
-      try {
-        content = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-      } catch (e) {
-        // JSONでない場合は無視（.js/.html想定）
-      }
+    let type = item.type;
+    if (!type || type === '(type不明)') {
+      const match = name.match(/(Model|Func|View|UI|Struct)$/);
+      type = match ? match[1] : '(type不明)';
+    }
 
-      index.push({
-  fileName: file,
-  folder: dir,
-  name: content.structure?.name || content.name || "(未定義)",
-  type: content.structure?.type || content.type || "(type不明)",
-  zone: content.structureScope?.zone || content.zone || "(ZONE不明)",
-  version: content.structure?.version || content.version || "不明",
-  description: content.structure?.description || content.description || "(説明なし)",
-  rawUrl: `${baseRawUrl}/${dir}/${file}`
-});
+    let zone = item.zone;
+    if (!zone || zone === '(ZONE不明)') {
+      zone = typeMap[type] || '(ZONE不明)';
+    }
+
+    return {
+      ...item,
+      name,
+      type,
+      zone
+    };
+  });
+}
+
+// 🔁 全フォルダ走査
+function generateAllIndex() {
+  const folders = ['structures', 'scripts', 'index', 'viewer'];
+  let allIndex = [];
+
+  folders.forEach(folder => {
+    const dirPath = path.join(__dirname, '../', folder);
+    if (fs.existsSync(dirPath)) {
+      const entries = readJsonFilesFromDir(dirPath);
+      allIndex = allIndex.concat(entries);
     }
   });
-});
 
-fs.writeFileSync(outputPath, JSON.stringify(index, null, 2), "utf-8");
-console.log("✅ allFileIndexMap.json を出力しました！");
+  const fixedIndex = autoFixStructureIndex(allIndex);
+  fs.writeFileSync(outputFile, JSON.stringify(fixedIndex, null, 2), 'utf8');
+  console.log('✅ allFileIndexMap.json が生成されました（補完済）');
+}
+
+generateAllIndex();
