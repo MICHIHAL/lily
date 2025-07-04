@@ -360,6 +360,16 @@
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/scripts/addRawUrls.js"
   },
   {
+    "fileName": "deprecatedIndex_v1.0.json",
+    "folder": "scripts",
+    "name": "(未定義)",
+    "type": "(type不明)",
+    "zone": "(ZONE不明)",
+    "version": "不明",
+    "description": "(説明なし)",
+    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/scripts/deprecatedIndex_v1.0.json"
+  },
+  {
     "fileName": "generateAllFileIndex.js",
     "folder": "scripts",
     "name": "(未定義)",
