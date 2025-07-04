@@ -1,18 +1,22 @@
 {
   "structureId": "projectGoalMap_v1.1",
-  "structureType": "Model",
-  "zone": "ZONE-1",
-  "description": "リリー開発プロジェクトの現時点における最優先ゴール",
-  "version": "1.1",
-  "coreGoal": "リリーを『Swift準拠の命名モデルを持った、Webアプリ開発ツール』として完成させる",
-  "subGoals": [
-    "命名・構造定義はすべてSwift命名規則に従って運用する（Model / View / UI / Func / Struct）",
-    "JavaScript上でもSwift構造を維持し、構造分類と意味付けを統一する",
-    "将来的なSwift（iOS）移行に対応できるよう、構造の再利用性を最大化する",
-    "GitHubとの連携を前提とし、ファイルベースで即時実行・反映できる開発運用にする",
-    "projectAnswerInstruction_v5.0 のルールをすべて継承・準拠する"
+  "zone": "ZONE-0",
+  "projectName": "Lily + HAL 成長支援プロジェクト",
+  "version": "v1.1",
+  "primaryGoal": "生活改善サポートAIおよび設計開発サポートAIの構築",
+  "secondaryGoal": "この取り組みを通して自己成長し、開発スキルや思考整理力を高める",
+  "outreachGoal": "AI活用の意義と楽しさを発信し、特性を持つ当事者へのヒントとなる実例を示す",
+  "stylePolicy": "Swift準拠の命名構造を維持しながら、必要に応じてJavaScriptなど他環境にも柔軟に展開",
+  "outputScope": [
+    "生活支援用UI（記録・演出）",
+    "開発支援構造（命名/保存/構文）",
+    "発信可能な記録ログや使用マニュアル",
+    "自分用の進化ログ"
   ],
-  "structureNamingPolicy": "templateNamingModel_v3.1 に基づく命名統一（Swift型風）",
-  "structureUsage": "構造定義・命令文・UI構成すべてに適用",
-  "transitionNote": "旧構造（MEMORYラベル・テンプレID等）はzone分類に変換／順次削除する方針"
+  "goalTag": [
+    "growth_log",
+    "life_support_AI",
+    "structure_support_AI",
+    "outreach_mission"
+  ]
 }
