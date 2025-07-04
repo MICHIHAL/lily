@@ -1,34 +1,42 @@
 const fs = require('fs');
 const path = require('path');
 
-const structureDir = path.join(__dirname, '../structures');
-const indexDir = path.join(__dirname, '../index');
-const outputFile = path.join(indexDir, 'allFileIndexMap.json');
+// 📂 対象フォルダ（必要なら追加可能）
+const folders = ['structures', 'scripts', 'index', 'viewer'];
+const baseDir = __dirname;
+const outputFile = path.join(baseDir, '../index/allFileIndexMap.json');
 
-function readJsonFilesFromDir(dirPath) {
+// 🔍 JSONファイルを読み込んで構造抽出
+function readJsonFilesFromDir(dirPath, folder) {
   const fileList = fs.readdirSync(dirPath);
   return fileList
     .filter(file => file.endsWith('.json'))
     .map(file => {
       const filePath = path.join(dirPath, file);
-      const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+      let data = {};
+
+      try {
+        data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+      } catch (err) {
+        console.warn(`⚠️ JSON読み込みエラー: ${filePath}`);
+      }
 
       return {
         fileName: file,
-        folder: path.basename(dirPath),
+        folder: folder,
         name: data.name || '(未定義)',
         type: data.type || '(type不明)',
         zone: data.zone || '(ZONE不明)',
         version: data.version || '不明',
         description: data.description || '(説明なし)',
-        rawUrl: `https://raw.githubusercontent.com/MICHIHAL/lily/main/${path.basename(dirPath)}/${file}`
+        rawUrl: `https://raw.githubusercontent.com/MICHIHAL/lily/main/${folder}/${file}`
       };
     });
 }
 
-// 🧠 未定義項目を補完するロジックを追加
+// 🧠 構造補完ルール（typeからzoneを自動補完）
 function autoFixStructureIndex(structureList) {
-  const typeMap = {
+  const typeToZone = {
     'Model': 'ZONE-1',
     'Func': 'ZONE-1',
     'View': 'ZONE-3',
@@ -37,6 +45,7 @@ function autoFixStructureIndex(structureList) {
   };
 
   return structureList.map(item => {
+    // structures フォルダのみ補完対象
     if (item.folder !== 'structures') return item;
 
     let name = item.name;
@@ -52,7 +61,7 @@ function autoFixStructureIndex(structureList) {
 
     let zone = item.zone;
     if (!zone || zone === '(ZONE不明)') {
-      zone = typeMap[type] || '(ZONE不明)';
+      zone = typeToZone[type] || '(ZONE不明)';
     }
 
     return {
@@ -64,22 +73,21 @@ function autoFixStructureIndex(structureList) {
   });
 }
 
-// 🔁 全フォルダ走査
-function generateAllIndex() {
-  const folders = ['structures', 'scripts', 'index', 'viewer'];
+// 🚀 全体実行
+function generateAllFileIndex_withFix() {
   let allIndex = [];
 
   folders.forEach(folder => {
-    const dirPath = path.join(__dirname, '../', folder);
+    const dirPath = path.join(baseDir, '../', folder);
     if (fs.existsSync(dirPath)) {
-      const entries = readJsonFilesFromDir(dirPath);
+      const entries = readJsonFilesFromDir(dirPath, folder);
       allIndex = allIndex.concat(entries);
     }
   });
 
   const fixedIndex = autoFixStructureIndex(allIndex);
   fs.writeFileSync(outputFile, JSON.stringify(fixedIndex, null, 2), 'utf8');
-  console.log('✅ allFileIndexMap.json が生成されました（補完済）');
+  console.log(`✅ allFileIndexMap.json を生成（補完済）→ ${outputFile}`);
 }
 
-generateAllIndex();
+generateAllFileIndex_withFix();
