@@ -1,0 +1,35 @@
+{
+  "structureId": "structureManagementPolicy_v1.0",
+  "structureType": "Model",
+  "zone": "ZONE-SYS",
+  "version": "1.0",
+  "status": "active",
+  "created": "2025-07-05T13:09:06.753601+00:00",
+  "sourceType": "spec",
+  "description": "構造体分類ルールと保存ポリシーを定義。構造型AIフレームワークの自己管理構造の一部。",
+  "classificationPolicy": {
+    "思想系": {
+      "type": "corePurpose / vision / philosophy",
+      "zone": "ZONE-0",
+      "sourceType": "log or vision",
+      "notes": "フレームワークの思想・目標・進化目的を記録"
+    },
+    "設計系": {
+      "type": "framework定義 / purpose定義 / core構成",
+      "zone": "ZONE-0 または ZONE-SYS",
+      "sourceType": "spec",
+      "notes": "構造の分類・展開・保存ルールを規定"
+    },
+    "構造整備系": {
+      "type": "スクリプト / 管理ポリシー",
+      "zone": "ZONE-SYS または scripts/",
+      "sourceType": "script",
+      "notes": "構造体の自動整備・診断・分類などの支援構造"
+    }
+  },
+  "tag": [
+    "structureOps",
+    "frameworkControl",
+    "ver1.0"
+  ]
+}
