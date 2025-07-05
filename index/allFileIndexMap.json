@@ -290,6 +290,16 @@
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/structureSyntaxGuard_v4.0.json"
   },
   {
+    "fileName": "structure_logs_ZONE0.json",
+    "folder": "structures",
+    "name": "structure_logs_ZONE0",
+    "type": "(type不明)",
+    "zone": "(ZONE不明)",
+    "version": "不明",
+    "description": "(説明なし)",
+    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/structure_logs_ZONE0.json"
+  },
+  {
     "fileName": "swiftRoleMap_v1.json",
     "folder": "structures",
     "name": "swiftRoleMap_v1",
