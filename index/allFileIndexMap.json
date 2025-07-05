@@ -40,6 +40,16 @@
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/brainLayer_v2.json"
   },
   {
+    "fileName": "canonicalStructurePolicy_v1.0.json",
+    "folder": "structures",
+    "name": "canonicalStructurePolicy_v1.0",
+    "type": "(type不明)",
+    "zone": "ZONE-SYS",
+    "version": "1.0",
+    "description": "構造体における中核（canonical）判定と継承・廃止ルールを定義する運用ポリシー。",
+    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/canonicalStructurePolicy_v1.0.json"
+  },
+  {
     "fileName": "commandSyntax_andExecutionModels_v4.json",
     "folder": "structures",
     "name": "commandSyntax_andExecutionModels_v4",
@@ -103,10 +113,10 @@
     "fileName": "frameworkCoreDefinition_v1.0.json",
     "folder": "structures",
     "name": "frameworkCoreDefinition_v1.0",
-    "type": "Model",
+    "type": "(type不明)",
     "zone": "ZONE-0",
     "version": "1.0",
-    "description": "リリー構造型AIフレームワークの目的・方針・設計原理を定義した中核モデル",
+    "description": "AIフレームワーク構築の中核思想定義。構造設計・展開方針の基盤として使用。",
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/frameworkCoreDefinition_v1.0.json"
   },
   {
