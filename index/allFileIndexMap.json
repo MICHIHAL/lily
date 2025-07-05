@@ -10,6 +10,16 @@
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/LilyToolCoreLayers_package_v1.json"
   },
   {
+    "fileName": "aiFrameworkGUIConcept_v1.0.json",
+    "folder": "structures",
+    "name": "aiFrameworkGUIConcept_v1.0",
+    "type": "Model",
+    "zone": "ZONE-0",
+    "version": "1.0",
+    "description": "GUIで構造体を操作できるAIフレーム構想",
+    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/aiFrameworkGUIConcept_v1.0.json"
+  },
+  {
     "fileName": "autoSaveGuard_v4.0_export.json",
     "folder": "structures",
     "name": "autoSaveGuard_v4.0",
@@ -80,6 +90,26 @@
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/designStepMap_v4.1.json"
   },
   {
+    "fileName": "evolutionNote_v1.0.json",
+    "folder": "structures",
+    "name": "evolutionNote_v1.0",
+    "type": "Model",
+    "zone": "ZONE-0",
+    "version": "1.0",
+    "description": "構造開発への熱中と、自己進化ログ",
+    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/evolutionNote_v1.0.json"
+  },
+  {
+    "fileName": "frameworkPolicy_v1.0.json",
+    "folder": "structures",
+    "name": "frameworkPolicy_v1.0",
+    "type": "Model",
+    "zone": "ZONE-0",
+    "version": "1.0",
+    "description": "構造型AI開発のための基盤方針",
+    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/frameworkPolicy_v1.0.json"
+  },
+  {
     "fileName": "generateStructureFunc.json",
     "folder": "structures",
     "name": "generateStructureFunc",
@@ -140,6 +170,16 @@
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/projectAnswerInstruction_v4.1.json"
   },
   {
+    "fileName": "projectDirectionChange_v1.0.json",
+    "folder": "structures",
+    "name": "projectDirectionChange_v1.0",
+    "type": "Model",
+    "zone": "ZONE-0",
+    "version": "1.0",
+    "description": "プロジェクトの主軸をAIフレームワーク開発に転換する記録",
+    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/projectDirectionChange_v1.0.json"
+  },
+  {
     "fileName": "projectGoalMap_v1.1.json",
     "folder": "structures",
     "name": "projectGoalMap_v1.1",
@@ -148,6 +188,16 @@
     "version": "v1.1",
     "description": "(説明なし)",
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/projectGoalMap_v1.1.json"
+  },
+  {
+    "fileName": "projectVision_v1.0.json",
+    "folder": "structures",
+    "name": "projectVision_v1.0",
+    "type": "Model",
+    "zone": "ZONE-0",
+    "version": "1.0",
+    "description": "リリーを相棒として開発・生活支援AIに育てたいという初期ビジョン",
+    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/projectVision_v1.0.json"
   },
   {
     "fileName": "roleOpsPolicy_v5.0.json",
