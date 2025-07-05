@@ -1,0 +1,22 @@
+{
+  "name": "frameworkPolicy_v1.0",
+  "type": "Model",
+  "zone": "ZONE-0",
+  "version": "1.0",
+  "description": "構造型AI開発のための基盤方針",
+  "content": {
+    "core": "構造体ベースでAIの拡張・制御・人格を定義可能にする",
+    "structure": [
+      "Model",
+      "View",
+      "Func",
+      "UI",
+      "Struct"
+    ],
+    "future": [
+      "非エンジニア対応UI",
+      "Claude/GitHub連携",
+      "テンプレ配布"
+    ]
+  }
+}

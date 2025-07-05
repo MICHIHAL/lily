@@ -1,0 +1,12 @@
+{
+  "name": "projectDirectionChange_v1.0",
+  "type": "Model",
+  "zone": "ZONE-0",
+  "version": "1.0",
+  "description": "プロジェクトの主軸をAIフレームワーク開発に転換する記録",
+  "content": {
+    "change": "生活支援AI → 構造型AI開発フレームワークへ",
+    "reason": "人格・命令・構造を定義してカスタマイズできる“拡張型マイGPT”を目指す",
+    "impact": "プロジェクト構造が再編され、再利用と配布が可能な形式へ"
+  }
+}

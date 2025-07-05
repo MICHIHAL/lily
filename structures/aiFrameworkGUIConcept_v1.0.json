@@ -1,0 +1,12 @@
+{
+  "name": "aiFrameworkGUIConcept_v1.0",
+  "type": "Model",
+  "zone": "ZONE-0",
+  "version": "1.0",
+  "description": "GUIで構造体を操作できるAIフレーム構想",
+  "content": {
+    "interface": "ChatGPTのGUI＋自然言語で完結する編集環境",
+    "core": "JSON構造体で人格・命令・機能を定義／拡張",
+    "difference": "LangChain等のコード依存フレームと一線を画す直感操作設計"
+  }
+}
