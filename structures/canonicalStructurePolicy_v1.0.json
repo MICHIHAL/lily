@@ -1,0 +1,21 @@
+{
+  "structureId": "canonicalStructurePolicy_v1.0",
+  "structureType": "Model",
+  "zone": "ZONE-SYS",
+  "version": "1.0",
+  "status": "active",
+  "created": "2025-07-05T13:13:40.027719+00:00",
+  "sourceType": "spec",
+  "description": "構造体における中核（canonical）判定と継承・廃止ルールを定義する運用ポリシー。",
+  "policy": {
+    "isCanonical": "true なら中核構造体として扱う",
+    "supersedes": "置き換える旧構造体IDを明記",
+    "supersededBy": "この構造体が何に置き換えられたか明記",
+    "isObsolete": "true なら廃止構造体（参照・使用不可）"
+  },
+  "tag": [
+    "structureOps",
+    "canonicalPolicy",
+    "ver1.0"
+  ]
+}

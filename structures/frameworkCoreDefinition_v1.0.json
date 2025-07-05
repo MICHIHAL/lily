@@ -1,19 +1,48 @@
 {
-  "name": "frameworkCoreDefinition_v1.0",
-  "type": "Model",
+  "structureId": "frameworkCoreDefinition_v1.0",
+  "structureType": "Model",
   "zone": "ZONE-0",
+  "description": "AIフレームワーク構築の中核思想定義。構造設計・展開方針の基盤として使用。",
   "version": "1.0",
-  "description": "リリー構造型AIフレームワークの目的・方針・設計原理を定義した中核モデル",
-  "corePurpose": "AIを相棒として、初心者でも扱え、中級者はカスタマイズできる汎用フレームを実現する",
-  "designFeatures": [
-    "実在の言語（Swiftなど）に準拠した分類設計",
-    "自然言語・GUI操作に対応した定義構造",
-    "ChatGPT・Claudeなど複数AIでの扱いやすさと拡張性",
-    "可読性・再利用性に優れた構造体によるフレーム分離"
+  "frameworkName": "Lily Structure Framework（LSF）",
+  "corePurpose": "AIを“相棒”として、生活・開発・学習・創作に活かせる構造定義型フレームワークを構築する",
+  "userTarget": [
+    "初心者（自然言語操作）",
+    "中級者（構造カスタマイズ）"
   ],
-  "useCases": [
-    "生活支援・開発支援・自己表現・教育・アプリ制作など",
-    "初心者による自然言語ベースの構築・活用",
-    "中級者によるコードベースの機能拡張"
-  ]
+  "keyFeatures": [
+    "JSON構造体ベースで定義・保存・実行が可能",
+    "Model / View / Func / UI / Struct の5分類",
+    "ChatGPTとの直接操作互換",
+    "GitHub保存による永続運用",
+    "人格・命令・UIなども構造体として統一管理",
+    "GUIや多AI連携の展開可能性を保つ"
+  ],
+  "operationPolicy": {
+    "structureControl": "自然言語＋構造定義による操作",
+    "memoryZones": [
+      "MEMORY-1",
+      "MEMORY-3",
+      "ZONE-0～3"
+    ],
+    "namingConvention": "Swift準拠命名＋バージョン＋zone分類",
+    "executionFlow": "構造呼び出し→命令処理→保存→再利用"
+  },
+  "futureVision": {
+    "Ver.1": "設計思想と保存ポリシー整備",
+    "Ver.2": "GUI構想・構造エディタ準備",
+    "Ver.3": "テンプレ共有と汎用展開",
+    "Ver.4": "人格・学習支援構造の導入",
+    "Ver.5": "収益化・公開連携フェーズ"
+  },
+  "tag": [
+    "frameworkCore",
+    "structureDrivenAI",
+    "ver1.0"
+  ],
+  "status": "active",
+  "created": "2025-07-05T13:04:04.798479+00:00",
+  "sourceType": "spec",
+  "isCanonical": true,
+  "note": "この構造体は当該カテゴリの基準設計とする"
 }
