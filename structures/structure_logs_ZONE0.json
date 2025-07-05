@@ -1,0 +1,76 @@
+[
+  {
+    "name": "projectVision_v1.0",
+    "type": "Model",
+    "zone": "ZONE-0",
+    "version": "1.0",
+    "description": "リリーを相棒として開発・生活支援AIに育てたいという初期ビジョン",
+    "content": {
+      "goal": "リリーを通じて開発・生活を支援し、成長した成果物を世に出す",
+      "focus": [
+        "構造設計支援",
+        "開発学習支援",
+        "生活改善支援"
+      ],
+      "motive": "過去の挫折を越え、“今は楽しい”という感覚の証明"
+    }
+  },
+  {
+    "name": "projectDirectionChange_v1.0",
+    "type": "Model",
+    "zone": "ZONE-0",
+    "version": "1.0",
+    "description": "プロジェクトの主軸をAIフレームワーク開発に転換する記録",
+    "content": {
+      "change": "生活支援AI → 構造型AI開発フレームワークへ",
+      "reason": "人格・命令・構造を定義してカスタマイズできる“拡張型マイGPT”を目指す",
+      "impact": "プロジェクト構造が再編され、再利用と配布が可能な形式へ"
+    }
+  },
+  {
+    "name": "aiFrameworkGUIConcept_v1.0",
+    "type": "Model",
+    "zone": "ZONE-0",
+    "version": "1.0",
+    "description": "GUIで構造体を操作できるAIフレーム構想",
+    "content": {
+      "interface": "ChatGPTのGUI＋自然言語で完結する編集環境",
+      "core": "JSON構造体で人格・命令・機能を定義／拡張",
+      "difference": "LangChain等のコード依存フレームと一線を画す直感操作設計"
+    }
+  },
+  {
+    "name": "frameworkPolicy_v1.0",
+    "type": "Model",
+    "zone": "ZONE-0",
+    "version": "1.0",
+    "description": "構造型AI開発のための基盤方針",
+    "content": {
+      "core": "構造体ベースでAIの拡張・制御・人格を定義可能にする",
+      "structure": [
+        "Model",
+        "View",
+        "Func",
+        "UI",
+        "Struct"
+      ],
+      "future": [
+        "非エンジニア対応UI",
+        "Claude/GitHub連携",
+        "テンプレ配布"
+      ]
+    }
+  },
+  {
+    "name": "evolutionNote_v1.0",
+    "type": "Model",
+    "zone": "ZONE-0",
+    "version": "1.0",
+    "description": "構造開発への熱中と、自己進化ログ",
+    "content": {
+      "old_self": "面倒事が苦手だった自分",
+      "new_self": "AI開発を楽しんで環境整備を始めた状態",
+      "insight": "楽しんでる感覚こそが本物。AI開発に適性を感じる"
+    }
+  }
+]
