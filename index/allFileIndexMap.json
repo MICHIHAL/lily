@@ -110,6 +110,16 @@
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/memoryPolicy_v4.0.json"
   },
   {
+    "fileName": "multiFrameworkAIOps_v1.0.json",
+    "folder": "structures",
+    "name": "multiFrameworkAIOps_v1.0",
+    "type": "(type不明)",
+    "zone": "ZONE-0",
+    "version": "1.0",
+    "description": "複数の異なる脳構造（brainLayer）と応答方針（roleOpsPolicy）を定義・運用し、AIによる視点分岐・役割分担・議論シミュレーションを可能にするフレームワーク構想。",
+    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/multiFrameworkAIOps_v1.0.json"
+  },
+  {
     "fileName": "policyLayer_v1.json",
     "folder": "structures",
     "name": "policyLayer_v1",
@@ -208,6 +218,16 @@
     "version": "不明",
     "description": "構造ファイルのインデックス形式と読み込み方針を定義する。GitHub上のallFileIndexMap.jsonを正式な構造インデックスとして使用。",
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/structureIndexPolicy_v1.1.json"
+  },
+  {
+    "fileName": "structureInfluenceReflection_v1.0.json",
+    "folder": "structures",
+    "name": "structureInfluenceReflection_v1.0",
+    "type": "(type不明)",
+    "zone": "ZONE-0",
+    "version": "1.0",
+    "description": "構造体（設計思想やポリシー）を保存・蓄積していくことで、AIおよびユーザーの思考が特定の方向へ引っ張られる可能性に関するメタ認識と対策指針を記録したもの。",
+    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/structureInfluenceReflection_v1.0.json"
   },
   {
     "fileName": "structureOpsPolicy_v5.0.json",
