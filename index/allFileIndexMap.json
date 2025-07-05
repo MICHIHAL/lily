@@ -100,6 +100,16 @@
     "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/evolutionNote_v1.0.json"
   },
   {
+    "fileName": "frameworkCoreDefinition_v1.0.json",
+    "folder": "structures",
+    "name": "frameworkCoreDefinition_v1.0",
+    "type": "Model",
+    "zone": "ZONE-0",
+    "version": "1.0",
+    "description": "リリー構造型AIフレームワークの目的・方針・設計原理を定義した中核モデル",
+    "rawUrl": "https://raw.githubusercontent.com/MICHIHAL/lily/main/structures/frameworkCoreDefinition_v1.0.json"
+  },
+  {
     "fileName": "frameworkPolicy_v1.0.json",
     "folder": "structures",
     "name": "frameworkPolicy_v1.0",
